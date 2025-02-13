@@ -23,11 +23,6 @@ jobs:
           cd server
           npm install
 
-      - name: Build the application
-        run: |
-          cd server
-          npm run build
-
       - name: Deploy to Vercel
         env:
           PORT: ${{ secrets.PORT }}
