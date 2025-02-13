@@ -32,4 +32,4 @@ jobs:
           VERCEL_TEAM_ID: ${{ secrets.VERCEL_TEAM_ID }}
         run: |
           cd server
-          npx vercel --prod --token $VERCEL_TOKEN --scope $VERCEL_TEAM_ID
+          npx vercel --prod --token $VERCEL_TOKEN --scope $VERCEL_TEAM_ID --yes
