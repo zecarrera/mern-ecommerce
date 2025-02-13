@@ -29,8 +29,7 @@ jobs:
           MONGO_URI: ${{ secrets.MONGO_URI }}
           JWT_SECRET: ${{ secrets.JWT_SECRET }}
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-          VERCEL_SERVER_PROJECT_ID: ${{ secrets.VERCEL_SERVER_PROJECT_ID }}
           VERCEL_TEAM_ID: ${{ secrets.VERCEL_TEAM_ID }}
         run: |
           cd server
-          npx vercel --prod --token $VERCEL_TOKEN --scope $VERCEL_TEAM_ID --project $VERCEL_SERVER_PROJECT_ID
+          npx vercel --prod --token $VERCEL_TOKEN --scope $VERCEL_TEAM_ID
