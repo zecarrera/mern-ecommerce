@@ -96,7 +96,7 @@ Clone the repository
 git clone https://github.com/mohamedsamara/mern-ecommerce.git
 ```
 
-Edit the dockercompose.yml file and update the the values for MONGO_URI and JWT_SECRET
+Edit the docker-compose.yml file and update the the values for MONGODB_URI and JWT_SECRET
 
 Then simply start the docker compose:
 
