@@ -1,0 +1,271 @@
+{
+  "uuid": "7fa682c7-b876-4468-b38f-90267d57db88",
+  "lastMigration": 33,
+  "name": "Mern server mock",
+  "endpointPrefix": "api",
+  "latency": 0,
+  "port": 9011,
+  "hostname": "",
+  "folders": [],
+  "routes": [
+    {
+      "uuid": "37122664-5132-4ee7-a87c-4f022bb5f474",
+      "type": "http",
+      "documentation": "Get brands list",
+      "method": "get",
+      "endpoint": "brand/list",
+      "responses": [
+        {
+          "uuid": "a8be96c7-faf5-4cb0-a776-b0ff693ea258",
+          "body": "{\n    \"brands\": [\n        {\n            \"isActive\": true,\n            \"merchant\": null,\n            \"_id\": \"679d46dbeaf8b200140c1014\",\n            \"name\": \"Ministry of Testing\",\n            \"description\": \"Software testing community\",\n            \"created\": \"2025-01-31T21:55:39.460Z\",\n            \"slug\": \"durgan-cummerata-and-dickens\",\n            \"__v\": 0\n        },\n        {\n            \"isActive\": true,\n            \"merchant\": null,\n            \"_id\": \"679d46dbeaf8b200140c1015\",\n            \"name\": \"Davis LLC\",\n            \"description\": \"Urbanus vesco tandem quia amet cumque vinitor ara adeptio varietas.\",\n            \"created\": \"2025-01-31T21:55:39.462Z\",\n            \"slug\": \"davis-llc\",\n            \"__v\": 0\n        },\n        {\n            \"isActive\": true,\n            \"merchant\": null,\n            \"_id\": \"679d46dbeaf8b200140c1016\",\n            \"name\": \"Moore - Hirthe\",\n            \"description\": \"Minima decimus coadunatio eos recusandae vergo cenaculum assumenda creptio.\",\n            \"created\": \"2025-01-31T21:55:39.464Z\",\n            \"slug\": \"moore-hirthe\",\n            \"__v\": 0\n        },\n        {\n            \"isActive\": true,\n            \"merchant\": null,\n            \"_id\": \"679d46dbeaf8b200140c1017\",\n            \"name\": \"Berge, Bergnaum and Maggio\",\n            \"description\": \"Officiis tenus cruentus illum cuius assumenda convoco delinquo desparatus.\",\n            \"created\": \"2025-01-31T21:55:39.465Z\",\n            \"slug\": \"berge-bergnaum-and-maggio\",\n            \"__v\": 0\n        },\n        {\n            \"isActive\": true,\n            \"merchant\": null,\n            \"_id\": \"679d46dbeaf8b200140c1018\",\n            \"name\": \"Pfeffer Group\",\n            \"description\": \"Desolo occaecati doloremque demum ceno corpus causa.\",\n            \"created\": \"2025-01-31T21:55:39.466Z\",\n            \"slug\": \"pfeffer-group\",\n            \"__v\": 0\n        },\n        {\n            \"isActive\": true,\n            \"merchant\": null,\n            \"_id\": \"679d46dbeaf8b200140c1019\",\n            \"name\": \"Hermann, Kerluke and Hudson\",\n            \"description\": \"Quo a absconditus degenero denego tres.\",\n            \"created\": \"2025-01-31T21:55:39.467Z\",\n            \"slug\": \"hermann-kerluke-and-hudson\",\n            \"__v\": 0\n        },\n        {\n            \"isActive\": true,\n            \"merchant\": null,\n            \"_id\": \"679d46dbeaf8b200140c101a\",\n            \"name\": \"Altenwerth, Walter and Stroman\",\n            \"description\": \"Canis corona curis possimus argentum.\",\n            \"created\": \"2025-01-31T21:55:39.468Z\",\n            \"slug\": \"altenwerth-walter-and-stroman\",\n            \"__v\": 0\n        },\n        {\n            \"isActive\": true,\n            \"merchant\": null,\n            \"_id\": \"679d46dbeaf8b200140c101b\",\n            \"name\": \"Hermiston, Swaniawski and McGlynn\",\n            \"description\": \"Tripudio umquam vesper cui illo thalassinus.\",\n            \"created\": \"2025-01-31T21:55:39.470Z\",\n            \"slug\": \"hermiston-swaniawski-and-mcglynn\",\n            \"__v\": 0\n        },\n        {\n            \"isActive\": true,\n            \"merchant\": null,\n            \"_id\": \"679d46dbeaf8b200140c101c\",\n            \"name\": \"Emard - Heaney\",\n            \"description\": \"Chirographum cornu necessitatibus conitor sophismata carus clementia comptus audacia coerceo.\",\n            \"created\": \"2025-01-31T21:55:39.474Z\",\n            \"slug\": \"emard-heaney\",\n            \"__v\": 0\n        },\n        {\n            \"isActive\": true,\n            \"merchant\": null,\n            \"_id\": \"679d46dbeaf8b200140c101d\",\n            \"name\": \"McCullough - Hegmann\",\n            \"description\": \"Solitudo voluptatum suggero appono torqueo omnis thesis.\",\n            \"created\": \"2025-01-31T21:55:39.475Z\",\n            \"slug\": \"mccullough-hegmann\",\n            \"__v\": 0\n        }\n    ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "d7e85b50-8ae1-44ec-baca-78566f1ef706",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "product/list",
+      "responses": [
+        {
+          "uuid": "af98d78c-ea5c-4e3b-883b-c72db7b82a55",
+          "body": "",
+          "latency": 0,
+          "statusCode": 304,
+          "label": "",
+          "headers": [
+            {
+              "key": "cache-control",
+              "value": "public, max-age=0, must-revalidate"
+            },
+            {
+              "key": "connection",
+              "value": "close"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "date",
+              "value": "Sun, 02 Feb 2025 21:09:42 GMT"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"139d-pSBoyUW9t0mOJ0esqu+nHgZa8m4\""
+            },
+            {
+              "key": "server",
+              "value": "Vercel"
+            },
+            {
+              "key": "x-vercel-cache",
+              "value": "MISS"
+            },
+            {
+              "key": "x-vercel-id",
+              "value": "lhr1::iad1::l4ldx-1738530582029-3825ddf99946"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "a2f64fc8-f5b0-4eef-9673-9255772552f2",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "category/list",
+      "responses": [
+        {
+          "uuid": "4d4dbcee-7397-4d08-8f42-efd886141127",
+          "body": "{\n  \"categories\": [\n    {\n      \"isActive\": true,\n      \"products\": [\n        \"5d21633a577a475fc07ef648\",\n        \"6087bd066c87d17a80f51d73\"\n      ],\n      \"_id\": \"5d2164ce577a475fc07ef650\",\n      \"name\": \"shoes\",\n      \"description\": \"Modo eros usu ei, his et modus ocurreret, nam id omnes congue postea.\",\n      \"created\": \"2019-07-07T03:19:42.610Z\",\n      \"slug\": \"shoes\",\n      \"__v\": 0\n    },\n    {\n      \"isActive\": true,\n      \"products\": [\n        \"5d2165c1577a475fc07ef651\",\n        \"5d216381577a475fc07ef649\",\n        \"5fec8a03389831362c778923\"\n      ],\n      \"_id\": \"5d2165ca577a475fc07ef652\",\n      \"name\": \"Bags\",\n      \"description\": \"Modo eros usu ei, his et modus ocurreret, nam id omnes congue postea.\",\n      \"created\": \"2019-07-07T03:23:54.479Z\",\n      \"slug\": \"bags\",\n      \"__v\": 0\n    },\n    {\n      \"isActive\": true,\n      \"products\": [\n        \"5d21814f4c42572e4c07bdbe\",\n        \"60dc0dcee4d8a715e7b36fed\"\n      ],\n      \"_id\": \"5d2181574c42572e4c07bdbf\",\n      \"name\": \"Perfumes\",\n      \"description\": \"Est mundi prodesset ex, pri case doctus id. Vim eu laudem epicuri consetetur, nec omnium vivendum inimicus et, vim dicit maiorum signiferumque cu.\",\n      \"created\": \"2019-07-07T05:21:27.294Z\",\n      \"slug\": \"perfumes\",\n      \"__v\": 0\n    },\n    {\n      \"isActive\": true,\n      \"products\": [\n        \"5d2163ee577a475fc07ef64c\",\n        \"5d216469577a475fc07ef64d\",\n        \"5d216625577a475fc07ef653\"\n      ],\n      \"_id\": \"60136d5ca44ceeaf670e7904\",\n      \"name\": \"Men\",\n      \"description\": \"Men Description\",\n      \"created\": \"2021-01-29T02:05:16.500Z\",\n      \"slug\": \"men\",\n      \"__v\": 0\n    }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [
+            {
+              "key": "access-control-allow-origin",
+              "value": "*"
+            },
+            {
+              "key": "age",
+              "value": "0"
+            },
+            {
+              "key": "cache-control",
+              "value": "public, max-age=0, must-revalidate"
+            },
+            {
+              "key": "connection",
+              "value": "close"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "date",
+              "value": "Sun, 02 Feb 2025 20:55:46 GMT"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"4b9-eJmnsWPNtQSfrRiZS+Wbe9ZmjGU\""
+            },
+            {
+              "key": "expect-ct",
+              "value": "max-age=0"
+            },
+            {
+              "key": "referrer-policy",
+              "value": "no-referrer"
+            },
+            {
+              "key": "server",
+              "value": "Vercel"
+            },
+            {
+              "key": "strict-transport-security",
+              "value": "max-age=15552000; includeSubDomains"
+            },
+            {
+              "key": "x-content-type-options",
+              "value": "nosniff"
+            },
+            {
+              "key": "x-dns-prefetch-control",
+              "value": "off"
+            },
+            {
+              "key": "x-download-options",
+              "value": "noopen"
+            },
+            {
+              "key": "x-frame-options",
+              "value": "SAMEORIGIN"
+            },
+            {
+              "key": "x-permitted-cross-domain-policies",
+              "value": "none"
+            },
+            {
+              "key": "x-vercel-cache",
+              "value": "MISS"
+            },
+            {
+              "key": "x-vercel-id",
+              "value": "lhr1::iad1::86cw2-1738529744119-1e3ff1188eed"
+            },
+            {
+              "key": "x-xss-protection",
+              "value": "0"
+            },
+            {
+              "key": "content-length",
+              "value": "1209"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "37122664-5132-4ee7-a87c-4f022bb5f474"
+    },
+    {
+      "type": "route",
+      "uuid": "d7e85b50-8ae1-44ec-baca-78566f1ef706"
+    },
+    {
+      "type": "route",
+      "uuid": "a2f64fc8-f5b0-4eef-9673-9255772552f2"
+    }
+  ],
+  "proxyMode": true,
+  "proxyHost": "https://mern-ecommerce-api-zeta.vercel.app",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": [],
+  "callbacks": []
+}

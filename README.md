@@ -19,11 +19,75 @@ An ecommerce store built with MERN stack, and utilizes third party API's. This e
 
 ## Demo
 
-This application is deployed on Vercel Please check it out :smile: [here](https://mern-store-gold.vercel.app).
+This application is deployed on Vercel Please check it out :smile: [here](https://mern-store-gold.vercel.app). This is from the original repo (https://github.com/mohamedsamara/mern-ecommerce)
 
-See admin dashboard [demo](https://mernstore-bucket.s3.us-east-2.amazonaws.com/admin.mp4)
+## Languages & tools
 
-## Docker Guide
+- [Node](https://nodejs.org/en/)
+
+- [Express](https://expressjs.com/)
+
+- [Mongoose](https://mongoosejs.com/)
+
+- [React](https://reactjs.org/)
+
+- [Webpack](https://webpack.js.org/)
+
+
+## Pre-requisites
+
+- Git is installed
+- Node is installed
+- MongoDB
+  - Option A: Using Docker
+  - Option B: Download and run it 
+
+## Running Locally
+
+### npm run dev
+#### Install
+
+`npm install` in the project root will install dependencies in both `client` and `server`. [See package.json](package.json)
+
+Some basic Git commands are:
+
+```
+git clone -b mot https://github.com/zecarrera/mern-ecommerce.git
+cd ${directory_name}
+npm install
+```
+
+#### Environment Variables - ENV
+
+Create `.env` file for both client and server. See examples:
+
+[Frontend ENV](client/.env.example)
+
+[Backend ENV](server/.env.example)
+
+Set JWT_SECRET to a custom value (You can use an online tool to generate a new secret. Ex.: https://jwtsecret.com/generate)
+
+#### Start mongo database server
+
+**Docker:**
+```
+docker compose -f 'docker-compose.yml' up -d --build 'mongo'
+```
+
+**Without docker:**
+
+1- Download the community version (https://www.mongodb.com/try/download/community)
+
+
+2- Start server
+
+#### Start development
+
+```
+npm run dev
+```
+
+## Running with Docker (app and database)
 
 To run this project locally you can use docker compose provided in the repository. Here is a guide on how to run this project locally using docker compose.
 
@@ -41,7 +105,7 @@ docker-compose build
 docker-compose up
 ```
 
-## Database Seed
+### Database Seed
 
 * The seed command will create an admin user in the database
 * The email and password are passed with the command as arguments
@@ -51,68 +115,3 @@ docker-compose up
 ```
 npm run seed:db [email-***@****.com] [password-******] // This is just an example.
 ```
-
-## Install
-
-`npm install` in the project root will install dependencies in both `client` and `server`. [See package.json](package.json)
-
-Some basic Git commands are:
-
-```
-git clone https://github.com/mohamedsamara/mern-ecommerce.git
-cd project
-npm install
-```
-
-## ENV
-
-Create `.env` file for both client and server. See examples:
-
-[Frontend ENV](client/.env.example)
-
-[Backend ENV](server/.env.example)
-
-
-## Vercel Deployment
-
-Both frontend and backend are deployed on Vercel from the same repository. When deploying on Vercel, make sure to specifiy the root directory as `client` and `server` when importing the repository. See [client vercel.json](client/vercel.json) and [server vercel.json](server/vercel.json).
-
-## Start development
-
-```
-npm run dev
-```
-
-## Languages & tools
-
-- [Node](https://nodejs.org/en/)
-
-- [Express](https://expressjs.com/)
-
-- [Mongoose](https://mongoosejs.com/)
-
-- [React](https://reactjs.org/)
-
-- [Webpack](https://webpack.js.org/)
-
-
-### Code Formatter
-
-- Add a `.vscode` directory
-- Create a file `settings.json` inside `.vscode`
-- Install Prettier - Code formatter in VSCode
-- Add the following snippet:  
-
-```json
-
-    {
-      "editor.formatOnSave": true,
-      "prettier.singleQuote": true,
-      "prettier.arrowParens": "avoid",
-      "prettier.jsxSingleQuote": true,
-      "prettier.trailingComma": "none",
-      "javascript.preferences.quoteStyle": "single",
-    }
-
-```
-
