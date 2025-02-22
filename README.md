@@ -19,7 +19,10 @@ An ecommerce store built with MERN stack, and utilizes third party API's. This e
 
 ## Demo
 
-This application is deployed on Vercel Please check it out :smile: [here](https://mern-store-gold.vercel.app). This is from the original repo (https://github.com/mohamedsamara/mern-ecommerce)
+The application is deployed on Render -> https://mern-ecommerce-ui.onrender.com/  
+*Note:* Some requests may take longer, since we're hosting on render's free tier, therefore application is configured to sleep if inactive for a long period. 
+
+An alternative is to use the version from the [original repo](https://github.com/mohamedsamara/mern-ecommerce), which is deployed on [Vercel](https://mern-store-gold.vercel.app).
 
 ## Languages & tools
 
@@ -33,61 +36,7 @@ This application is deployed on Vercel Please check it out :smile: [here](https:
 
 - [Webpack](https://webpack.js.org/)
 
-
-## Pre-requisites
-
-- Git is installed
-- Node is installed
-- MongoDB
-  - Option A: Using Docker
-  - Option B: Download and run it 
-
-## Running Locally
-
-### npm run dev
-#### Install
-
-`npm install` in the project root will install dependencies in both `client` and `server`. [See package.json](package.json)
-
-Some basic Git commands are:
-
-```
-git clone -b mot https://github.com/zecarrera/mern-ecommerce.git
-cd ${directory_name}
-npm install
-```
-
-#### Environment Variables - ENV
-
-Create `.env` file for both client and server. See examples:
-
-[Frontend ENV](client/.env.example)
-
-[Backend ENV](server/.env.example)
-
-Set JWT_SECRET to a custom value (You can use an online tool to generate a new secret. Ex.: https://jwtsecret.com/generate)
-
-#### Start mongo database server
-
-**Docker:**
-```
-docker compose -f 'docker-compose.yml' up -d --build 'mongo'
-```
-
-**Without docker:**
-
-1- Download the community version (https://www.mongodb.com/try/download/community)
-
-
-2- Start server
-
-#### Start development
-
-```
-npm run dev
-```
-
-## Running with Docker (app and database)
+## Running with Docker
 
 To run this project locally you can use docker compose provided in the repository. Here is a guide on how to run this project locally using docker compose.
 
@@ -101,8 +50,52 @@ Edit the docker-compose.yml file and update the the values for MONGODB_URI and J
 Then simply start the docker compose:
 
 ```
-docker-compose build
-docker-compose up
+docker compose build
+docker compose up
+```
+
+## Running without docker
+
+### Pre-requisites
+
+- Node
+- MongoDB
+
+### Install
+
+`npm install` in the project root will install dependencies in both `client` and `server`. [See package.json](package.json)
+
+Some basic Git commands are:
+
+```
+git clone -b mot https://github.com/zecarrera/mern-ecommerce.git
+cd ${directory_name}
+npm install
+```
+
+### Environment Variables - ENV
+
+Create `.env` file for both client and server. See examples:
+
+[Frontend ENV](client/.env.example)
+
+[Backend ENV](server/.env.example)
+
+Set JWT_SECRET to a custom value (You can use an online tool to generate a new secret. Ex.: https://jwtsecret.com/generate)
+
+### Start mongo database server
+
+1 - Create a free [MongoDB Atlas Account](https://www.mongodb.com/)  
+2 - Configure your cluster and your application user  
+3 - Add your IP to the network whitelist  
+4 - Set your username and password in the MONGODB_URI on the .env server file  
+Example `mongodb+srv://<db_username>:<db_password>@<clusterName>.mongodb.net/?retryWrites=true&w=majority`  
+*MongoDB Compass:* If needed
+
+#### Start application
+
+```
+npm run dev
 ```
 
 ### Database Seed

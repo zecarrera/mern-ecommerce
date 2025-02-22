@@ -1,5 +1,5 @@
 # Use official Node.js 14 as base image
-FROM node:16.20.2-buster-slim
+FROM node:22.1.0-slim
 
 # Set working directory
 WORKDIR /usr/src/app
@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 3000
 
 # Default command to start the application
-CMD ["npm", "start"]
+CMD ["sh", "-c", "npm run dev && echo 'Client service has started successfully on http://localhost:8080'"]

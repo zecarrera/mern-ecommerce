@@ -1,14 +1,7 @@
-const Mongoose = require('mongoose');
-const slug = require('mongoose-slug-generator');
-const { Schema } = Mongoose;
-
-const options = {
-  separator: '-',
-  lang: 'en',
-  truncate: 120
-};
-
-Mongoose.plugin(slug, options);
+const mongoose = require('mongoose');
+const uniqueSlug = require('unique-slug');
+const shortid = require('shortid');
+const { Schema } = mongoose;
 
 // Product Schema
 const ProductSchema = new Schema({
@@ -17,11 +10,11 @@ const ProductSchema = new Schema({
   },
   name: {
     type: String,
-    trim: true
+    trim: true,
+    required: true
   },
   slug: {
     type: String,
-    slug: 'name',
     unique: true
   },
   imageUrl: {
@@ -60,4 +53,17 @@ const ProductSchema = new Schema({
   }
 });
 
-module.exports = Mongoose.model('Product', ProductSchema);
+ProductSchema.pre('save', async function (next) {
+  if (this.isNew || this.isModified('name')) {
+    let slug = uniqueSlug(this.name);
+    const existingProduct = await mongoose.models.Product.findOne({ slug });
+
+    if (existingProduct) {
+      slug = `${slug}-${shortid.generate()}`;
+    }
+
+    this.slug = slug;
+  } next();
+});
+
+module.exports = mongoose.model('Product', ProductSchema);
