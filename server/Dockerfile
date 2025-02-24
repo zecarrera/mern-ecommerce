@@ -1,4 +1,4 @@
-# Use official Node.js 14 as base image
+# Use official Node.js 22.1 as base image
 FROM node:22.1.0-slim
 
 # Set working directory

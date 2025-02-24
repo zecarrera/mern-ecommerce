@@ -1,32 +1,23 @@
-# Use official Node.js 14 as base image
-FROM node:16.20.2-buster-slim as build
+# Use an official Node.js runtime as a parent image
+FROM node:22.1.0
 
-# Set working directory
+# Set the working directory in the container
 WORKDIR /usr/src/app
 
-# Copy package.json and package-lock.json
+# Copy package.json and package-lock.json to the working directory
 COPY package*.json ./
 
 # Install dependencies
 RUN npm install
 
-# Copy the rest of the client code
+# Copy the rest of the application code to the working directory
 COPY . .
 
-RUN mv .env.example .env
-
-# Build the client for production
-RUN npm run build
-
-
-FROM nginx:alpine
-# Copy the build artifacts from the build stage
-COPY --from=build /usr/src/app/dist /usr/share/nginx/html
-# NGINX default configuration file
-COPY nginx.conf /etc/nginx/nginx.conf
-
-# Expose port 8080
+# Expose the port that the app runs on
 EXPOSE 8080
 
-CMD ["nginx", "-g", "daemon off;"]
+# Set environment variables
+ENV NODE_ENV=development
 
+# Run the application
+CMD ["npm", "run", "dev"]

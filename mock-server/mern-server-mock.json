@@ -2,7 +2,7 @@
   "uuid": "7fa682c7-b876-4468-b38f-90267d57db88",
   "lastMigration": 33,
   "name": "Mern server mock",
-  "endpointPrefix": "api",
+  "endpointPrefix": "",
   "latency": 0,
   "port": 9011,
   "hostname": "",
@@ -236,7 +236,7 @@
     }
   ],
   "proxyMode": true,
-  "proxyHost": "https://mern-ecommerce-api-zeta.vercel.app",
+  "proxyHost": "https://mern-ecommerce-uote.onrender.com",
   "proxyRemovePrefix": false,
   "tlsOptions": {
     "enabled": false,

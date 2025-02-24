@@ -36,36 +36,31 @@ An alternative is to use the version from the [original repo](https://github.com
 
 - [Webpack](https://webpack.js.org/)
 
-## Running with Docker
+## Running UI with Docker and mockoon api server
 
-To run this project locally you can use docker compose provided in the repository. Here is a guide on how to run this project locally using docker compose.
+**Step 1:**  
+Create `.env` file for the client application. API_URL should be set to mockoon's URL.
+See examples:
 
-Clone the repository
+[Frontend ENV](client/.env.example)
+
+**Step 2:**  
+Build and run UI docker container
 ```
-git clone https://github.com/mohamedsamara/mern-ecommerce.git
-```
-
-Edit the docker-compose.yml file and update the the values for MONGODB_URI and JWT_SECRET
-
-Then simply start the docker compose:
-
-```
-docker compose build
-docker compose up
+cd client
+docker build -t mern-ecommerce-client-mockoon .
+docker run -p 8080:8080 mern-ecommerce-client-mockoon
 ```
 
-## Running without docker
+
+## Running locally
 
 ### Pre-requisites
 
 - Node
 - MongoDB
 
-### Install
-
-`npm install` in the project root will install dependencies in both `client` and `server`. [See package.json](package.json)
-
-Some basic Git commands are:
+### Install dependencies
 
 ```
 git clone -b mot https://github.com/zecarrera/mern-ecommerce.git
@@ -92,6 +87,11 @@ Set JWT_SECRET to a custom value (You can use an online tool to generate a new s
 Example `mongodb+srv://<db_username>:<db_password>@<clusterName>.mongodb.net/?retryWrites=true&w=majority`  
 *MongoDB Compass:* If needed
 
+*Run mongo with docker:*  
+You can avoid running mongo using atlas, by having it running with docker.
+
+`docker compose -f 'docker-compose.yml' up -d --build 'mongo'`
+
 #### Start application
 
 ```
@@ -107,4 +107,22 @@ npm run dev
 
 ```
 npm run seed:db [email-***@****.com] [password-******] // This is just an example.
+```
+
+## Running UI and server with Docker (no mockoon)
+
+To run this project locally you can use docker compose provided in the repository. Here is a guide on how to run this project locally using docker compose.
+
+Clone the repository
+```
+git clone -b mot https://github.com/zecarrera/mern-ecommerce.git
+```
+
+Edit the docker-compose.yml file and update the the values for MONGODB_URI and JWT_SECRET
+
+Then simply start the docker compose:
+
+```
+docker compose build
+docker compose up
 ```
