@@ -1,3 +1,6 @@
+> [!IMPORTANT]  
+> Following along with API Mocking Made Easy? Head over to the [mot branch](https://github.com/zecarrera/mern-ecommerce/tree/mot).
+
 # MERN Ecommerce
 
 ## Description
