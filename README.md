@@ -36,7 +36,9 @@ An alternative is to use the version from the [original repo](https://github.com
 
 - [Webpack](https://webpack.js.org/)
 
-## Running UI with Docker and mockoon api server
+## Running UI and mockoon api server
+
+### Using Docker
 
 **Step 1:**  
 Create `.env` file for the client application. API_URL should be set to mockoon's URL.
@@ -52,15 +54,34 @@ docker build -t mern-ecommerce-client-mockoon .
 docker run -p 8080:8080 mern-ecommerce-client-mockoon
 ```
 
+### Without Docker
 
-## Running locally
+**Pre requisites:**  
+- Node
 
-### Pre-requisites
+**Step 1:**  
+Create `.env` file for the client application. API_URL should be set to mockoon's URL.
+See examples:
+
+[Frontend ENV](client/.env.example)
+
+**Step 2:**  
+Install dependencies and start client app
+```
+cd client
+npm install
+npm run dev
+```
+
+## Running locally (entire application)
+
+### Without Docker
+#### Pre-requisites
 
 - Node
 - MongoDB
 
-### Install dependencies
+#### Install dependencies
 
 ```
 git clone -b mot https://github.com/zecarrera/mern-ecommerce.git
@@ -68,7 +89,7 @@ cd ${directory_name}
 npm install
 ```
 
-### Environment Variables - ENV
+#### Environment Variables - ENV
 
 Create `.env` file for both client and server. See examples:
 
@@ -78,7 +99,7 @@ Create `.env` file for both client and server. See examples:
 
 Set JWT_SECRET to a custom value (You can use an online tool to generate a new secret. Ex.: https://jwtsecret.com/generate)
 
-### Start mongo database server
+#### Start mongo database server
 
 1 - Create a free [MongoDB Atlas Account](https://www.mongodb.com/)  
 2 - Configure your cluster and your application user  
@@ -98,7 +119,7 @@ You can avoid running mongo using atlas, by having it running with docker.
 npm run dev
 ```
 
-### Database Seed
+#### Database Seed
 
 * The seed command will create an admin user in the database
 * The email and password are passed with the command as arguments
@@ -109,7 +130,7 @@ npm run dev
 npm run seed:db [email-***@****.com] [password-******] // This is just an example.
 ```
 
-## Running UI and server with Docker (no mockoon)
+### With Docker
 
 To run this project locally you can use docker compose provided in the repository. Here is a guide on how to run this project locally using docker compose.
 
