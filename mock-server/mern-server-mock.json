@@ -13,7 +13,7 @@
       "type": "http",
       "documentation": "Get brands list",
       "method": "get",
-      "endpoint": "brand/list",
+      "endpoint": "api/brand/list",
       "responses": [
         {
           "uuid": "a8be96c7-faf5-4cb0-a776-b0ff693ea258",
@@ -31,7 +31,22 @@
           "filePath": "",
           "databucketID": "",
           "sendFileAsBody": false,
-          "rules": [],
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "firstname",
+              "value": "test",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "body",
+              "modifier": "lastname",
+              "value": "user",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
           "rulesOperator": "OR",
           "disableTemplating": false,
           "fallbackTo404": false,
@@ -219,6 +234,970 @@
       "responseMode": null,
       "streamingMode": null,
       "streamingInterval": 0
+    },
+    {
+      "uuid": "fa1eabd7-ae57-42a1-a317-5ddbb93191e4",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "api/product/list/search/toy",
+      "responses": [
+        {
+          "uuid": "0c9325c0-c61c-4fd1-8439-3ce13fd92f1a",
+          "body": "{\n  \"products\": []\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [
+            {
+              "key": "access-control-allow-origin",
+              "value": "*"
+            },
+            {
+              "key": "alt-svc",
+              "value": "h3=\":443\"; ma=86400"
+            },
+            {
+              "key": "cf-cache-status",
+              "value": "DYNAMIC"
+            },
+            {
+              "key": "cf-ray",
+              "value": "918780460e8976c3-LHR"
+            },
+            {
+              "key": "connection",
+              "value": "close"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "date",
+              "value": "Thu, 27 Feb 2025 10:30:43 GMT"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"f-vfnIa/Ee2X4JU4AloATP5DE2Q+4\""
+            },
+            {
+              "key": "expect-ct",
+              "value": "max-age=0"
+            },
+            {
+              "key": "referrer-policy",
+              "value": "no-referrer"
+            },
+            {
+              "key": "rndr-id",
+              "value": "22f7dd06-6da9-43e3"
+            },
+            {
+              "key": "server",
+              "value": "cloudflare"
+            },
+            {
+              "key": "strict-transport-security",
+              "value": "max-age=15552000; includeSubDomains"
+            },
+            {
+              "key": "vary",
+              "value": "Accept-Encoding"
+            },
+            {
+              "key": "x-content-type-options",
+              "value": "nosniff"
+            },
+            {
+              "key": "x-dns-prefetch-control",
+              "value": "off"
+            },
+            {
+              "key": "x-download-options",
+              "value": "noopen"
+            },
+            {
+              "key": "x-frame-options",
+              "value": "SAMEORIGIN"
+            },
+            {
+              "key": "x-permitted-cross-domain-policies",
+              "value": "none"
+            },
+            {
+              "key": "x-render-origin-server",
+              "value": "Render"
+            },
+            {
+              "key": "x-xss-protection",
+              "value": "0"
+            },
+            {
+              "key": "content-length",
+              "value": "20"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "14c8a2ba-a636-472f-b107-5553a1e9d6a3",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "api/product/list/search/hat",
+      "responses": [
+        {
+          "uuid": "f99df2cd-d068-41fb-9fc0-5f1ec88579cf",
+          "body": "{\n  \"products\": [\n    {\n      \"name\": \"Refined Soft Hat\",\n      \"price\": 404,\n      \"slug\": \"refined-soft-hat\"\n    },\n    {\n      \"name\": \"Recycled Soft Hat\",\n      \"price\": 826,\n      \"slug\": \"recycled-soft-hat\"\n    },\n    {\n      \"name\": \"Awesome Soft Hat\",\n      \"price\": 56,\n      \"slug\": \"awesome-soft-hat\"\n    },\n    {\n      \"name\": \"Generic Cotton Hat\",\n      \"price\": 22,\n      \"slug\": \"generic-cotton-hat\"\n    },\n    {\n      \"name\": \"Incredible Fresh Hat\",\n      \"price\": 102,\n      \"slug\": \"incredible-fresh-hat\"\n    },\n    {\n      \"name\": \"Ergonomic Rubber Hat\",\n      \"price\": 640,\n      \"slug\": \"ergonomic-rubber-hat\"\n    }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [
+            {
+              "key": "access-control-allow-origin",
+              "value": "*"
+            },
+            {
+              "key": "alt-svc",
+              "value": "h3=\":443\"; ma=86400"
+            },
+            {
+              "key": "cf-cache-status",
+              "value": "DYNAMIC"
+            },
+            {
+              "key": "cf-ray",
+              "value": "918780d45dd7beab-LHR"
+            },
+            {
+              "key": "connection",
+              "value": "close"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "date",
+              "value": "Thu, 27 Feb 2025 10:31:06 GMT"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"1ae-ZBP1tjv3yWKYAAE7i5BW92sNfqc\""
+            },
+            {
+              "key": "expect-ct",
+              "value": "max-age=0"
+            },
+            {
+              "key": "referrer-policy",
+              "value": "no-referrer"
+            },
+            {
+              "key": "rndr-id",
+              "value": "a295472c-0f36-47e5"
+            },
+            {
+              "key": "server",
+              "value": "cloudflare"
+            },
+            {
+              "key": "strict-transport-security",
+              "value": "max-age=15552000; includeSubDomains"
+            },
+            {
+              "key": "vary",
+              "value": "Accept-Encoding"
+            },
+            {
+              "key": "x-content-type-options",
+              "value": "nosniff"
+            },
+            {
+              "key": "x-dns-prefetch-control",
+              "value": "off"
+            },
+            {
+              "key": "x-download-options",
+              "value": "noopen"
+            },
+            {
+              "key": "x-frame-options",
+              "value": "SAMEORIGIN"
+            },
+            {
+              "key": "x-permitted-cross-domain-policies",
+              "value": "none"
+            },
+            {
+              "key": "x-render-origin-server",
+              "value": "Render"
+            },
+            {
+              "key": "x-xss-protection",
+              "value": "0"
+            },
+            {
+              "key": "content-length",
+              "value": "642"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "9168811e-1512-406a-a5e2-c23c5486cff1",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "api/product/list/search/bag",
+      "responses": [
+        {
+          "uuid": "4bd0fa99-ba13-47a2-830d-80da63216ca6",
+          "body": "{\n  \"products\": [    {\n      \"name\": \"Test bag\",\n      \"price\": 22,\n      \"slug\": \"refined-test-bag\"\n    }]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [
+            {
+              "key": "access-control-allow-origin",
+              "value": "*"
+            },
+            {
+              "key": "alt-svc",
+              "value": "h3=\":443\"; ma=86400"
+            },
+            {
+              "key": "cf-cache-status",
+              "value": "DYNAMIC"
+            },
+            {
+              "key": "cf-ray",
+              "value": "9187814b5d9c53a0-LHR"
+            },
+            {
+              "key": "connection",
+              "value": "close"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "date",
+              "value": "Thu, 27 Feb 2025 10:31:24 GMT"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"f-vfnIa/Ee2X4JU4AloATP5DE2Q+4\""
+            },
+            {
+              "key": "expect-ct",
+              "value": "max-age=0"
+            },
+            {
+              "key": "referrer-policy",
+              "value": "no-referrer"
+            },
+            {
+              "key": "rndr-id",
+              "value": "c584d01c-4c3b-4154"
+            },
+            {
+              "key": "server",
+              "value": "cloudflare"
+            },
+            {
+              "key": "strict-transport-security",
+              "value": "max-age=15552000; includeSubDomains"
+            },
+            {
+              "key": "vary",
+              "value": "Accept-Encoding"
+            },
+            {
+              "key": "x-content-type-options",
+              "value": "nosniff"
+            },
+            {
+              "key": "x-dns-prefetch-control",
+              "value": "off"
+            },
+            {
+              "key": "x-download-options",
+              "value": "noopen"
+            },
+            {
+              "key": "x-frame-options",
+              "value": "SAMEORIGIN"
+            },
+            {
+              "key": "x-permitted-cross-domain-policies",
+              "value": "none"
+            },
+            {
+              "key": "x-render-origin-server",
+              "value": "Render"
+            },
+            {
+              "key": "x-xss-protection",
+              "value": "0"
+            },
+            {
+              "key": "content-length",
+              "value": "20"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "22470a6a-a8e6-42af-a737-a8ff5f3f7b13",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "api/product/list/search/:searchItem",
+      "responses": [
+        {
+          "uuid": "22521aa1-5e86-4fb2-875c-103f93a14c4a",
+          "body": "{\n  \"products\": [    {\n      \"name\": \"Test bag\",\n      \"price\": 22,\n      \"slug\": \"refined-test-bag\"\n    }]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Bags - 1 item",
+          "headers": [
+            {
+              "key": "access-control-allow-origin",
+              "value": "*"
+            },
+            {
+              "key": "alt-svc",
+              "value": "h3=\":443\"; ma=86400"
+            },
+            {
+              "key": "cf-cache-status",
+              "value": "DYNAMIC"
+            },
+            {
+              "key": "cf-ray",
+              "value": "918780460e8976c3-LHR"
+            },
+            {
+              "key": "connection",
+              "value": "close"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "date",
+              "value": "Thu, 27 Feb 2025 10:30:43 GMT"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"f-vfnIa/Ee2X4JU4AloATP5DE2Q+4\""
+            },
+            {
+              "key": "expect-ct",
+              "value": "max-age=0"
+            },
+            {
+              "key": "referrer-policy",
+              "value": "no-referrer"
+            },
+            {
+              "key": "rndr-id",
+              "value": "22f7dd06-6da9-43e3"
+            },
+            {
+              "key": "server",
+              "value": "cloudflare"
+            },
+            {
+              "key": "strict-transport-security",
+              "value": "max-age=15552000; includeSubDomains"
+            },
+            {
+              "key": "vary",
+              "value": "Accept-Encoding"
+            },
+            {
+              "key": "x-content-type-options",
+              "value": "nosniff"
+            },
+            {
+              "key": "x-dns-prefetch-control",
+              "value": "off"
+            },
+            {
+              "key": "x-download-options",
+              "value": "noopen"
+            },
+            {
+              "key": "x-frame-options",
+              "value": "SAMEORIGIN"
+            },
+            {
+              "key": "x-permitted-cross-domain-policies",
+              "value": "none"
+            },
+            {
+              "key": "x-render-origin-server",
+              "value": "Render"
+            },
+            {
+              "key": "x-xss-protection",
+              "value": "0"
+            },
+            {
+              "key": "content-length",
+              "value": "20"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "params",
+              "modifier": "searchItem",
+              "value": "bag",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "fcafab36-5adb-4a0a-9e29-dd6b30360132",
+          "body": "{\n  \"products\": [\n    {\n      \"name\": \"Refined Soft Hat\",\n      \"price\": 404,\n      \"slug\": \"refined-soft-hat\"\n    },\n    {\n      \"name\": \"Recycled Soft Hat\",\n      \"price\": 826,\n      \"slug\": \"recycled-soft-hat\"\n    },\n    {\n      \"name\": \"Awesome Soft Hat\",\n      \"price\": 56,\n      \"slug\": \"awesome-soft-hat\"\n    },\n    {\n      \"name\": \"Generic Cotton Hat\",\n      \"price\": 22,\n      \"slug\": \"generic-cotton-hat\"\n    },\n    {\n      \"name\": \"Incredible Fresh Hat\",\n      \"price\": 102,\n      \"slug\": \"incredible-fresh-hat\"\n    },\n    {\n      \"name\": \"Ergonomic Rubber Hat\",\n      \"price\": 640,\n      \"slug\": \"ergonomic-rubber-hat\"\n    }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Hats - multiple items",
+          "headers": [
+            {
+              "key": "access-control-allow-origin",
+              "value": "*"
+            },
+            {
+              "key": "alt-svc",
+              "value": "h3=\":443\"; ma=86400"
+            },
+            {
+              "key": "cf-cache-status",
+              "value": "DYNAMIC"
+            },
+            {
+              "key": "cf-ray",
+              "value": "918780460e8976c3-LHR"
+            },
+            {
+              "key": "connection",
+              "value": "close"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "date",
+              "value": "Thu, 27 Feb 2025 10:30:43 GMT"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"f-vfnIa/Ee2X4JU4AloATP5DE2Q+4\""
+            },
+            {
+              "key": "expect-ct",
+              "value": "max-age=0"
+            },
+            {
+              "key": "referrer-policy",
+              "value": "no-referrer"
+            },
+            {
+              "key": "rndr-id",
+              "value": "22f7dd06-6da9-43e3"
+            },
+            {
+              "key": "server",
+              "value": "cloudflare"
+            },
+            {
+              "key": "strict-transport-security",
+              "value": "max-age=15552000; includeSubDomains"
+            },
+            {
+              "key": "vary",
+              "value": "Accept-Encoding"
+            },
+            {
+              "key": "x-content-type-options",
+              "value": "nosniff"
+            },
+            {
+              "key": "x-dns-prefetch-control",
+              "value": "off"
+            },
+            {
+              "key": "x-download-options",
+              "value": "noopen"
+            },
+            {
+              "key": "x-frame-options",
+              "value": "SAMEORIGIN"
+            },
+            {
+              "key": "x-permitted-cross-domain-policies",
+              "value": "none"
+            },
+            {
+              "key": "x-render-origin-server",
+              "value": "Render"
+            },
+            {
+              "key": "x-xss-protection",
+              "value": "0"
+            },
+            {
+              "key": "content-length",
+              "value": "20"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "params",
+              "modifier": "searchItem",
+              "value": "hat",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "b46c8405-526d-4f94-b12d-3e698e986b59",
+          "body": "{\n  \"products\": []\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Toys - empty list",
+          "headers": [
+            {
+              "key": "access-control-allow-origin",
+              "value": "*"
+            },
+            {
+              "key": "alt-svc",
+              "value": "h3=\":443\"; ma=86400"
+            },
+            {
+              "key": "cf-cache-status",
+              "value": "DYNAMIC"
+            },
+            {
+              "key": "cf-ray",
+              "value": "918780460e8976c3-LHR"
+            },
+            {
+              "key": "connection",
+              "value": "close"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "date",
+              "value": "Thu, 27 Feb 2025 10:30:43 GMT"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"f-vfnIa/Ee2X4JU4AloATP5DE2Q+4\""
+            },
+            {
+              "key": "expect-ct",
+              "value": "max-age=0"
+            },
+            {
+              "key": "referrer-policy",
+              "value": "no-referrer"
+            },
+            {
+              "key": "rndr-id",
+              "value": "22f7dd06-6da9-43e3"
+            },
+            {
+              "key": "server",
+              "value": "cloudflare"
+            },
+            {
+              "key": "strict-transport-security",
+              "value": "max-age=15552000; includeSubDomains"
+            },
+            {
+              "key": "vary",
+              "value": "Accept-Encoding"
+            },
+            {
+              "key": "x-content-type-options",
+              "value": "nosniff"
+            },
+            {
+              "key": "x-dns-prefetch-control",
+              "value": "off"
+            },
+            {
+              "key": "x-download-options",
+              "value": "noopen"
+            },
+            {
+              "key": "x-frame-options",
+              "value": "SAMEORIGIN"
+            },
+            {
+              "key": "x-permitted-cross-domain-policies",
+              "value": "none"
+            },
+            {
+              "key": "x-render-origin-server",
+              "value": "Render"
+            },
+            {
+              "key": "x-xss-protection",
+              "value": "0"
+            },
+            {
+              "key": "content-length",
+              "value": "20"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "params",
+              "modifier": "searchItem",
+              "value": "toy",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "66b27d84-f70b-4bf9-9d97-207bcca3eca0",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "api/product/list",
+      "responses": [
+        {
+          "uuid": "15fad35f-c177-43e4-b858-83d597556572",
+          "body": "{\n  \"products\": [\n    {\n      \"_id\": \"67aa25aafd92fdf1b5648263\",\n      \"taxable\": true,\n      \"isActive\": true,\n      \"brand\": {\n        \"name\": \"Gutkowski, Schulist and Hintz\",\n        \"_id\": \"67aa259dfd92fdf1b56481fc\",\n        \"isActive\": true\n      },\n      \"sku\": \"v5joDRftBr\",\n      \"name\": \"test toy\",\n      \"description\": \"Cognatus dapifer termes caste assentator cultura.\",\n      \"quantity\": 17,\n      \"price\": 980,\n      \"created\": \"2025-02-10T16:13:30.221Z\",\n      \"slug\": \"rustic-cotton-bacon\",\n      \"__v\": 0,\n      \"totalRatings\": 0,\n      \"totalReviews\": 0,\n      \"averageRating\": 0\n    }\n  ],\n  \"totalPages\": 1,\n  \"currentPage\": 1,\n  \"count\": 1\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "toys",
+          "headers": [
+            {
+              "key": "access-control-allow-origin",
+              "value": "*"
+            },
+            {
+              "key": "alt-svc",
+              "value": "h3=\":443\"; ma=86400"
+            },
+            {
+              "key": "cf-cache-status",
+              "value": "DYNAMIC"
+            },
+            {
+              "key": "cf-ray",
+              "value": "91878d358bc348c3-LHR"
+            },
+            {
+              "key": "connection",
+              "value": "close"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "date",
+              "value": "Thu, 27 Feb 2025 10:39:33 GMT"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"f0e-/CIjUWdDXSLWftEkRIXo5fMfEKA\""
+            },
+            {
+              "key": "expect-ct",
+              "value": "max-age=0"
+            },
+            {
+              "key": "referrer-policy",
+              "value": "no-referrer"
+            },
+            {
+              "key": "rndr-id",
+              "value": "434fb5a8-06b8-4d48"
+            },
+            {
+              "key": "server",
+              "value": "cloudflare"
+            },
+            {
+              "key": "strict-transport-security",
+              "value": "max-age=15552000; includeSubDomains"
+            },
+            {
+              "key": "vary",
+              "value": "Accept-Encoding"
+            },
+            {
+              "key": "x-content-type-options",
+              "value": "nosniff"
+            },
+            {
+              "key": "x-dns-prefetch-control",
+              "value": "off"
+            },
+            {
+              "key": "x-download-options",
+              "value": "noopen"
+            },
+            {
+              "key": "x-frame-options",
+              "value": "SAMEORIGIN"
+            },
+            {
+              "key": "x-permitted-cross-domain-policies",
+              "value": "none"
+            },
+            {
+              "key": "x-render-origin-server",
+              "value": "Render"
+            },
+            {
+              "key": "x-xss-protection",
+              "value": "0"
+            },
+            {
+              "key": "content-length",
+              "value": "5377"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "category",
+              "value": "toys",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "fe252be8-38ba-4ea4-b570-066df2523115",
+          "body": "{\n  \"products\": [\n    {\n      \"_id\": \"67aa25aafd92fdf1b5648263\",\n      \"taxable\": true,\n      \"isActive\": true,\n      \"brand\": {\n        \"name\": \"Gutkowski, Schulist and Hintz\",\n        \"_id\": \"67aa259dfd92fdf1b56481fc\",\n        \"isActive\": true\n      },\n      \"sku\": \"v5joDRftBr\",\n      \"name\": \"test music\",\n      \"description\": \"Cognatus dapifer termes caste assentator cultura.\",\n      \"quantity\": 17,\n      \"price\": 980,\n      \"created\": \"2025-02-10T16:13:30.221Z\",\n      \"slug\": \"rustic-cotton-bacon\",\n      \"__v\": 0,\n      \"totalRatings\": 0,\n      \"totalReviews\": 0,\n      \"averageRating\": 0\n    }\n  ],\n  \"totalPages\": 1,\n  \"currentPage\": 1,\n  \"count\": 1\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "outdoors",
+          "headers": [
+            {
+              "key": "access-control-allow-origin",
+              "value": "*"
+            },
+            {
+              "key": "alt-svc",
+              "value": "h3=\":443\"; ma=86400"
+            },
+            {
+              "key": "cf-cache-status",
+              "value": "DYNAMIC"
+            },
+            {
+              "key": "cf-ray",
+              "value": "91878d358bc348c3-LHR"
+            },
+            {
+              "key": "connection",
+              "value": "close"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "date",
+              "value": "Thu, 27 Feb 2025 10:39:33 GMT"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"f0e-/CIjUWdDXSLWftEkRIXo5fMfEKA\""
+            },
+            {
+              "key": "expect-ct",
+              "value": "max-age=0"
+            },
+            {
+              "key": "referrer-policy",
+              "value": "no-referrer"
+            },
+            {
+              "key": "rndr-id",
+              "value": "434fb5a8-06b8-4d48"
+            },
+            {
+              "key": "server",
+              "value": "cloudflare"
+            },
+            {
+              "key": "strict-transport-security",
+              "value": "max-age=15552000; includeSubDomains"
+            },
+            {
+              "key": "vary",
+              "value": "Accept-Encoding"
+            },
+            {
+              "key": "x-content-type-options",
+              "value": "nosniff"
+            },
+            {
+              "key": "x-dns-prefetch-control",
+              "value": "off"
+            },
+            {
+              "key": "x-download-options",
+              "value": "noopen"
+            },
+            {
+              "key": "x-frame-options",
+              "value": "SAMEORIGIN"
+            },
+            {
+              "key": "x-permitted-cross-domain-policies",
+              "value": "none"
+            },
+            {
+              "key": "x-render-origin-server",
+              "value": "Render"
+            },
+            {
+              "key": "x-xss-protection",
+              "value": "0"
+            },
+            {
+              "key": "content-length",
+              "value": "5377"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "category",
+              "value": "music",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
     }
   ],
   "rootChildren": [
@@ -233,6 +1212,26 @@
     {
       "type": "route",
       "uuid": "a2f64fc8-f5b0-4eef-9673-9255772552f2"
+    },
+    {
+      "type": "route",
+      "uuid": "fa1eabd7-ae57-42a1-a317-5ddbb93191e4"
+    },
+    {
+      "type": "route",
+      "uuid": "14c8a2ba-a636-472f-b107-5553a1e9d6a3"
+    },
+    {
+      "type": "route",
+      "uuid": "9168811e-1512-406a-a5e2-c23c5486cff1"
+    },
+    {
+      "type": "route",
+      "uuid": "22470a6a-a8e6-42af-a737-a8ff5f3f7b13"
+    },
+    {
+      "type": "route",
+      "uuid": "66b27d84-f70b-4bf9-9d97-207bcca3eca0"
     }
   ],
   "proxyMode": true,
