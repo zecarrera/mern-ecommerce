@@ -16,3 +16,12 @@ package.json.bak
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log* 
+
+
+# e2e-tests
+
+# Playwright
+client/test-results/
+client/playwright-report/
+client/blob-report/
+client/playwright/.cache/
