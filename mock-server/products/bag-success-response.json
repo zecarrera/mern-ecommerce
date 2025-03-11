@@ -1,0 +1,9 @@
+{
+    "products": [
+        {
+            "name": "Test bag",
+            "price": 11,
+            "slug": "refined-test-bag"
+        }
+    ]
+}

@@ -517,7 +517,7 @@
       "responses": [
         {
           "uuid": "4bd0fa99-ba13-47a2-830d-80da63216ca6",
-          "body": "{\n  \"products\": [    {\n      \"name\": \"Test bag\",\n      \"price\": 22,\n      \"slug\": \"refined-test-bag\"\n    }]\n}",
+          "body": "",
           "latency": 0,
           "statusCode": 200,
           "label": "",
@@ -611,10 +611,10 @@
               "value": "20"
             }
           ],
-          "bodyType": "INLINE",
-          "filePath": "",
+          "bodyType": "FILE",
+          "filePath": "products/bag-success-response.json",
           "databucketID": "",
-          "sendFileAsBody": false,
+          "sendFileAsBody": true,
           "rules": [],
           "rulesOperator": "OR",
           "disableTemplating": false,
