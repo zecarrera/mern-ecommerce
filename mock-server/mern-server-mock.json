@@ -251,7 +251,7 @@
               "value": "1209"
             }
           ],
-          "bodyType": "FILE",
+          "bodyType": "INLINE",
           "filePath": "",
           "databucketID": "",
           "sendFileAsBody": false,
