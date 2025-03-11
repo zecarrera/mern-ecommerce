@@ -1,0 +1,104 @@
+{
+    "brands": [
+        {
+            "isActive": true,
+            "merchant": null,
+            "_id": "679d46dbeaf8b200140c1014",
+            "name": "MOT - Test",
+            "description": "Software testing community",
+            "created": "2025-01-31T21:55:39.460Z",
+            "slug": "durgan-cummerata-and-dickens",
+            "__v": 0
+        },
+        {
+            "isActive": true,
+            "merchant": null,
+            "_id": "679d46dbeaf8b200140c1015",
+            "name": "{{faker 'string.alphanumeric' length=10}}",
+            "description": "Urbanus vesco tandem quia amet cumque vinitor ara adeptio varietas.",
+            "created": "2025-01-31T21:55:39.462Z",
+            "slug": "davis-llc",
+            "__v": 0
+        },
+        {
+            "isActive": true,
+            "merchant": null,
+            "_id": "679d46dbeaf8b200140c1016",
+            "name": "Moore - Hirthe",
+            "description": "Minima decimus coadunatio eos recusandae vergo cenaculum assumenda creptio.",
+            "created": "2025-01-31T21:55:39.464Z",
+            "slug": "moore-hirthe",
+            "__v": 0
+        },
+        {
+            "isActive": true,
+            "merchant": null,
+            "_id": "679d46dbeaf8b200140c1017",
+            "name": "Berge, Bergnaum and Maggio",
+            "description": "Officiis tenus cruentus illum cuius assumenda convoco delinquo desparatus.",
+            "created": "2025-01-31T21:55:39.465Z",
+            "slug": "berge-bergnaum-and-maggio",
+            "__v": 0
+        },
+        {
+            "isActive": true,
+            "merchant": null,
+            "_id": "679d46dbeaf8b200140c1018",
+            "name": "Pfeffer Group",
+            "description": "Desolo occaecati doloremque demum ceno corpus causa.",
+            "created": "2025-01-31T21:55:39.466Z",
+            "slug": "pfeffer-group",
+            "__v": 0
+        },
+        {
+            "isActive": true,
+            "merchant": null,
+            "_id": "679d46dbeaf8b200140c1019",
+            "name": "Hermann, Kerluke and Hudson",
+            "description": "Quo a absconditus degenero denego tres.",
+            "created": "2025-01-31T21:55:39.467Z",
+            "slug": "hermann-kerluke-and-hudson",
+            "__v": 0
+        },
+        {
+            "isActive": true,
+            "merchant": null,
+            "_id": "679d46dbeaf8b200140c101a",
+            "name": "Altenwerth, Walter and Stroman",
+            "description": "Canis corona curis possimus argentum.",
+            "created": "2025-01-31T21:55:39.468Z",
+            "slug": "altenwerth-walter-and-stroman",
+            "__v": 0
+        },
+        {
+            "isActive": true,
+            "merchant": null,
+            "_id": "679d46dbeaf8b200140c101b",
+            "name": "Hermiston, Swaniawski and McGlynn",
+            "description": "Tripudio umquam vesper cui illo thalassinus.",
+            "created": "2025-01-31T21:55:39.470Z",
+            "slug": "hermiston-swaniawski-and-mcglynn",
+            "__v": 0
+        },
+        {
+            "isActive": true,
+            "merchant": null,
+            "_id": "679d46dbeaf8b200140c101c",
+            "name": "Emard - Heaney",
+            "description": "Chirographum cornu necessitatibus conitor sophismata carus clementia comptus audacia coerceo.",
+            "created": "2025-01-31T21:55:39.474Z",
+            "slug": "emard-heaney",
+            "__v": 0
+        },
+        {
+            "isActive": true,
+            "merchant": null,
+            "_id": "679d46dbeaf8b200140c101d",
+            "name": "McCullough - Hegmann",
+            "description": "Solitudo voluptatum suggero appono torqueo omnis thesis.",
+            "created": "2025-01-31T21:55:39.475Z",
+            "slug": "mccullough-hegmann",
+            "__v": 0
+        }
+    ]
+}
