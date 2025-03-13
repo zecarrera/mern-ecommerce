@@ -708,6 +708,38 @@ paths:
                     type: array
                     items:
                       $ref: "#/components/schemas/Category"
+              example:
+                categories:
+                  - _id: "67aa259bfd92fdf1b56481ec"
+                    isActive: true
+                    products:
+                      - "67aa259efd92fdf1b5648205"
+                      - "67aa25a1fd92fdf1b564821b"
+                    name: "Toys"
+                    description: "Demergo vorago confido inflammatio audacia dapifer utpote ducimus nobis curvo."
+                    created: "2025-02-10T16:13:15.551Z"
+                    slug: "toys"
+                    __v: 0
+                  - _id: "67aa259bfd92fdf1b56481ed"
+                    isActive: true
+                    products:
+                      - "67aa259efd92fdf1b5648204"
+                      - "67aa259ffd92fdf1b564820e"
+                    name: "Outdoors"
+                    description: "Tribuo defessus possimus defluo."
+                    created: "2025-02-10T16:13:15.686Z"
+                    slug: "outdoors"
+                    __v: 0
+                  - _id: "67aa259bfd92fdf1b56481ee"
+                    isActive: true
+                    products:
+                      - "67aa259efd92fdf1b5648202"
+                      - "67aa25a1fd92fdf1b564821e"
+                    name: "Electronics"
+                    description: "Laudantium crustulum adeptio."
+                    created: "2025-02-10T16:13:15.819Z"
+                    slug: "electronics"
+                    __v: 0
         "400":
           description: Bad request
 
@@ -2149,16 +2181,21 @@ components:
       properties:
         _id:
           type: string
+          example: "67aa259bfd92fdf1b56481ec"
         name:
           type: string
+          example: "Toys"
         description:
           type: string
+          example: "Demergo vorago confido inflammatio audacia dapifer utpote ducimus nobis curvo."
         products:
           type: array
           items:
             type: string
+            example: "67aa259efd92fdf1b5648205"
         isActive:
           type: boolean
+          example: true
 
     Brand:
       type: object
