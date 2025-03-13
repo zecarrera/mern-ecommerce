@@ -742,6 +742,12 @@ paths:
                     __v: 0
         "400":
           description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BadRequest"
+              example:
+                error: "Your request could not be processed. Please try again."
 
   /category:
     get:
@@ -2357,3 +2363,10 @@ components:
           type: boolean
         updated:
           type: string
+
+    BadRequest:
+      type: object
+      properties:
+        error:
+          type: string
+          example: "Your request could not be processed. Please try again."
