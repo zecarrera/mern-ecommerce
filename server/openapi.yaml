@@ -47,6 +47,11 @@ paths:
                 - zipCode
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: Address added successfully
           content:
             application/json:
@@ -69,6 +74,11 @@ paths:
         - Address
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: List of all addresses
           content:
             application/json:
@@ -95,6 +105,11 @@ paths:
             type: string
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: Address details
           content:
             application/json:
@@ -129,6 +144,11 @@ paths:
                   $ref: "#/components/schemas/Address"
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: Address updated successfully
           content:
             application/json:
@@ -155,6 +175,11 @@ paths:
             type: string
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: Address deleted successfully
           content:
             application/json:
@@ -189,6 +214,11 @@ paths:
                 - password
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: User logged in successfully
           content:
             application/json:
@@ -233,6 +263,11 @@ paths:
                 - password
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: User registered successfully
           content:
             application/json:
@@ -266,6 +301,11 @@ paths:
                 - email
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: Password reset link sent
           content:
             application/json:
@@ -303,6 +343,11 @@ paths:
                 - password
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: Password reset successfully
           content:
             application/json:
@@ -338,6 +383,11 @@ paths:
                 - description
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: Brand added successfully
           content:
             application/json:
@@ -360,6 +410,11 @@ paths:
         - Brand
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: List of active brands
           content:
             application/json:
@@ -380,6 +435,11 @@ paths:
         - Brand
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: List of all brands
           content:
             application/json:
@@ -406,6 +466,11 @@ paths:
             type: string
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: Brand details
           content:
             application/json:
@@ -440,6 +505,11 @@ paths:
                   $ref: "#/components/schemas/Brand"
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: Brand updated successfully
           content:
             application/json:
@@ -475,6 +545,11 @@ paths:
                   $ref: "#/components/schemas/Brand"
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: Brand active status updated successfully
           content:
             application/json:
@@ -501,6 +576,11 @@ paths:
             type: string
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: Brand deleted successfully
           content:
             application/json:
@@ -541,6 +621,11 @@ paths:
                         type: number
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: Items added to cart successfully
           content:
             application/json:
@@ -567,6 +652,11 @@ paths:
             type: string
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: Cart deleted successfully
           content:
             application/json:
@@ -609,6 +699,11 @@ paths:
                       type: number
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: Product added to cart successfully
           content:
             application/json:
@@ -638,6 +733,11 @@ paths:
             type: string
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: Product deleted from cart successfully
           content:
             application/json:
@@ -676,6 +776,11 @@ paths:
                 - description
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: Category added successfully
           content:
             application/json:
@@ -698,6 +803,11 @@ paths:
         - Category
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: List of active categories
           content:
             application/json:
@@ -756,6 +866,11 @@ paths:
         - Category
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: List of all categories
           content:
             application/json:
@@ -782,6 +897,11 @@ paths:
             type: string
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: Category details
           content:
             application/json:
@@ -816,6 +936,11 @@ paths:
                   $ref: "#/components/schemas/Category"
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: Category updated successfully
           content:
             application/json:
@@ -851,6 +976,11 @@ paths:
                   $ref: "#/components/schemas/Category"
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: Category active status updated successfully
           content:
             application/json:
@@ -877,6 +1007,11 @@ paths:
             type: string
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: Category deleted successfully
           content:
             application/json:
@@ -914,6 +1049,11 @@ paths:
                 - message
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: Contact message added successfully
           content:
             application/json:
@@ -936,6 +1076,11 @@ paths:
         - Health
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: Health check successful
           content:
             application/json:
@@ -975,6 +1120,11 @@ paths:
                 - brandName
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: Merchant added successfully
           content:
             application/json:
@@ -1003,6 +1153,11 @@ paths:
             type: string
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: List of merchants matching the search criteria
           content:
             application/json:
@@ -1034,6 +1189,11 @@ paths:
             type: integer
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: List of all merchants
           content:
             application/json:
@@ -1075,6 +1235,11 @@ paths:
                   $ref: "#/components/schemas/Merchant"
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: Merchant active status updated successfully
           content:
             application/json:
@@ -1099,6 +1264,11 @@ paths:
             type: string
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: Merchant approved successfully
           content:
             application/json:
@@ -1123,6 +1293,11 @@ paths:
             type: string
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: Merchant rejected successfully
           content:
             application/json:
@@ -1167,6 +1342,11 @@ paths:
                 - password
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: Merchant signed up successfully
           content:
             application/json:
@@ -1191,6 +1371,11 @@ paths:
             type: string
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: Merchant deleted successfully
           content:
             application/json:
@@ -1222,6 +1407,11 @@ paths:
                 - email
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: Successfully subscribed to the newsletter
           content:
             application/json:
@@ -1256,6 +1446,11 @@ paths:
                 - total
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: Order added successfully
           content:
             application/json:
@@ -1287,6 +1482,11 @@ paths:
             type: string
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: List of orders matching the search criteria
           content:
             application/json:
@@ -1318,6 +1518,11 @@ paths:
             type: integer
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: List of all orders
           content:
             application/json:
@@ -1355,6 +1560,11 @@ paths:
             type: integer
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: List of my orders
           content:
             application/json:
@@ -1387,6 +1597,11 @@ paths:
             type: string
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: Order details
           content:
             application/json:
@@ -1413,6 +1628,11 @@ paths:
             type: string
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: Order cancelled successfully
           content:
             application/json:
@@ -1454,6 +1674,11 @@ paths:
                 - status
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: Order item status updated successfully
           content:
             application/json:
@@ -1480,6 +1705,11 @@ paths:
             type: string
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: Product details
           content:
             application/json:
@@ -1506,6 +1736,11 @@ paths:
             type: string
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: List of products matching the search criteria
           content:
             application/json:
@@ -1567,6 +1802,11 @@ paths:
             type: integer
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: List of products
           content:
             application/json:
@@ -1593,6 +1833,11 @@ paths:
         - Product
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: List of products
           content:
             application/json:
@@ -1647,6 +1892,11 @@ paths:
                 - image
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: Product added successfully
           content:
             application/json:
@@ -1669,6 +1919,11 @@ paths:
         - Product
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: List of all products
           content:
             application/json:
@@ -1695,6 +1950,11 @@ paths:
             type: string
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: Product details
           content:
             application/json:
@@ -1729,6 +1989,11 @@ paths:
                   $ref: "#/components/schemas/Product"
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: Product updated successfully
           content:
             application/json:
@@ -1764,6 +2029,11 @@ paths:
                   $ref: "#/components/schemas/Product"
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: Product active status updated successfully
           content:
             application/json:
@@ -1790,6 +2060,11 @@ paths:
             type: string
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: Product deleted successfully
           content:
             application/json:
@@ -1827,6 +2102,11 @@ paths:
                 - comment
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: Review added successfully
           content:
             application/json:
@@ -1860,6 +2140,11 @@ paths:
             type: integer
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: List of all reviews
           content:
             application/json:
@@ -1892,6 +2177,11 @@ paths:
             type: string
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: List of reviews for the product
           content:
             application/json:
@@ -1929,6 +2219,11 @@ paths:
                   $ref: "#/components/schemas/Review"
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: Review updated successfully
           content:
             application/json:
@@ -1955,6 +2250,11 @@ paths:
             type: string
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: Review approved successfully
           content:
             application/json:
@@ -1979,6 +2279,11 @@ paths:
             type: string
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: Review rejected successfully
           content:
             application/json:
@@ -2003,6 +2308,11 @@ paths:
             type: string
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: Review deleted successfully
           content:
             application/json:
@@ -2029,6 +2339,11 @@ paths:
             type: string
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: List of users matching the search criteria
           content:
             application/json:
@@ -2060,6 +2375,11 @@ paths:
             type: integer
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: List of all users
           content:
             application/json:
@@ -2093,6 +2413,11 @@ paths:
                   $ref: "#/components/schemas/User"
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: User profile updated successfully
           content:
             application/json:
@@ -2115,6 +2440,11 @@ paths:
         - User
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: User profile details
           content:
             application/json:
@@ -2147,6 +2477,11 @@ paths:
                 - isLiked
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: Wishlist updated successfully
           content:
             application/json:
@@ -2167,6 +2502,11 @@ paths:
         - Wishlist
       responses:
         "200":
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
           description: List of wishlist items
           content:
             application/json:
