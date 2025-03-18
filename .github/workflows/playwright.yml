@@ -20,6 +20,10 @@ jobs:
         run: |
           cd client
           npx playwright install --with-deps
+      - name: Check node_modules
+        run: |
+          cd client
+          ls node_modules
       - name: Run Playwright tests
         run: |
           cd client
