@@ -237,7 +237,7 @@
           "callbacks": []
         }
       ],
-      "responseMode": null,
+      "responseMode": "FALLBACK",
       "streamingMode": null,
       "streamingInterval": 0
     },
