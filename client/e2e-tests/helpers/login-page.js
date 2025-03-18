@@ -24,7 +24,7 @@ export async function submitLoginForm(page) {
 }
 
 export async function gotoLoginPage(page) {
-    await page.goto('http://localhost:8080/');
+    await page.goto('');
     await welcomeLinkLocator(page).click();
     await loginMenuLocator(page).click();
 }

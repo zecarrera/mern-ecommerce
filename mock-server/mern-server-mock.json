@@ -106,6 +106,142 @@
   ],
   "routes": [
     {
+      "uuid": "4f0c2b96-c5a7-448a-af93-ea6579b8e9ef",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "api/auth/login",
+      "responses": [
+        {
+          "uuid": "9bd2299c-6a25-40ae-9e44-6f0729ba017d",
+          "body": "{\"error\": \"An Error Occurred\"}",
+          "latency": 0,
+          "statusCode": 500,
+          "label": "",
+          "headers": [
+            {
+              "key": "access-control-allow-headers",
+              "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+            },
+            {
+              "key": "access-control-allow-methods",
+              "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+            },
+            {
+              "key": "access-control-allow-origin",
+              "value": "*"
+            },
+            {
+              "key": "alt-svc",
+              "value": "h3=\":443\"; ma=86400"
+            },
+            {
+              "key": "cf-cache-status",
+              "value": "DYNAMIC"
+            },
+            {
+              "key": "cf-ray",
+              "value": "92258968cb583867-LHR"
+            },
+            {
+              "key": "connection",
+              "value": "close"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "date",
+              "value": "Tue, 18 Mar 2025 14:49:27 GMT"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"31-+LPqVaufFfk0BphZ6hpEySjFnfo\""
+            },
+            {
+              "key": "expect-ct",
+              "value": "max-age=0"
+            },
+            {
+              "key": "referrer-policy",
+              "value": "no-referrer"
+            },
+            {
+              "key": "rndr-id",
+              "value": "cb090d7f-f5fc-4310"
+            },
+            {
+              "key": "server",
+              "value": "cloudflare"
+            },
+            {
+              "key": "strict-transport-security",
+              "value": "max-age=15552000; includeSubDomains"
+            },
+            {
+              "key": "vary",
+              "value": "Accept-Encoding"
+            },
+            {
+              "key": "x-content-type-options",
+              "value": "nosniff"
+            },
+            {
+              "key": "x-dns-prefetch-control",
+              "value": "off"
+            },
+            {
+              "key": "x-download-options",
+              "value": "noopen"
+            },
+            {
+              "key": "x-frame-options",
+              "value": "SAMEORIGIN"
+            },
+            {
+              "key": "x-permitted-cross-domain-policies",
+              "value": "none"
+            },
+            {
+              "key": "x-render-origin-server",
+              "value": "Render"
+            },
+            {
+              "key": "x-xss-protection",
+              "value": "0"
+            },
+            {
+              "key": "content-length",
+              "value": "54"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "",
+              "value": "{\"email\":\"simulate_error@putsbox.com\",\"password\":\"123456\"}",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
       "uuid": "37122664-5132-4ee7-a87c-4f022bb5f474",
       "type": "http",
       "documentation": "Get brands list",
@@ -1715,6 +1851,10 @@
     {
       "type": "folder",
       "uuid": "f46e1832-6e24-462b-b890-f809132641d4"
+    },
+    {
+      "type": "route",
+      "uuid": "4f0c2b96-c5a7-448a-af93-ea6579b8e9ef"
     }
   ],
   "proxyMode": true,
@@ -1748,6 +1888,14 @@
       "value": ""
     }
   ],
-  "data": [],
+  "data": [
+    {
+      "uuid": "ece04d89-ff96-4cc8-bb90-3ff60880aec6",
+      "id": "qcz7",
+      "name": "Addresses",
+      "documentation": "",
+      "value": "[\n  {{#repeat 10}}\n    {\n      \"id\": \"{{faker 'string.uuid'}}\",\n      \"street\": \"{{faker 'location.streetAddress'}}\",\n      \"city\": \"{{faker 'location.city'}}\",\n      \"state\": \"{{faker 'location.state' abbreviated=true}}\",\n      \"zip\": \"{{faker 'location.zipCode'}}\",\n      \"country\": \"{{faker 'location.country'}}\",\n      \"latitude\": {{faker 'location.latitude'}},\n      \"longitude\": {{faker 'location.longitude'}},\n      \"phone\": \"{{faker 'phone.number'}}\",\n      \"email\": \"{{faker 'internet.email'}}\",\n      \"website\": \"{{faker 'internet.url'}}\"\n    }\n  {{/repeat}}\n]"
+    }
+  ],
   "callbacks": []
 }

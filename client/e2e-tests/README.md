@@ -27,6 +27,11 @@ Run a single test:
 
 npx playwright test -g "has title"
 
+Set CI environment variable to false when running tests locally
+
+Running specific tests:
+npx playwright test --grep @login (runs only the smoke test)
+
 
 View the Report: After the tests finish, Playwright will generate an HTML report. You can open it to see the results.
 npx playwright show-report
