@@ -5,6 +5,8 @@ jobs:
   test-live:
     timeout-minutes: 60
     runs-on: ubuntu-latest
+    env:
+      PLAYWRIGHT_BASE_URL: "https://mern-ecommerce-ui.onrender.com/"
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -23,8 +25,6 @@ jobs:
           cd client
           echo "baseURL: $(node -p "require('./playwright.config.js').default.use.baseURL")"
           npx playwright test --grep @live
-        env:
-          CI: true
       - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
         with:
