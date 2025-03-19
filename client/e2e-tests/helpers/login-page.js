@@ -20,7 +20,7 @@ export async function enterCredentials(page, email, password) {
 
 export async function submitLoginForm(page) {
     const loginButton = loginButtonLocator(page);
-    await loginButton.click();
+    await loginButton.click({ force: true });
 }
 
 export async function gotoLoginPage(page) {
