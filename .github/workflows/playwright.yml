@@ -21,6 +21,7 @@ jobs:
       - name: Run Playwright tests
         run: |
           cd client
+          echo "baseURL: $(node -p "require('./playwright.config.js').default.use.baseURL")"
           npx playwright test --grep @live
         env:
           CI: true

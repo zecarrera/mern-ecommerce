@@ -33,6 +33,7 @@ jobs:
       - name: Run Playwright tests
         run: |
           cd client
+          echo "baseURL: $(node -p "require('./playwright.config.js').default.use.baseURL")"
           npx playwright test --grep @mockoon
       - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
